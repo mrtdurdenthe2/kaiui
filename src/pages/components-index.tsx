@@ -14,16 +14,15 @@ function ComponentLink({
   return (
     <Link
       to={`/components/${slug}`}
-      className="inline-flex items-center gap-2 text-lg font-medium underline-offset-4 hover:underline md:text-base"
+      className="inline-flex items-center gap-2 text-[15px] leading-6 font-[450] underline-offset-4 hover:underline"
     >
       {title}
       {isNew ? (
         <>
           <span className="sr-only">New</span>
-          <span
-            aria-hidden="true"
-            className="size-2 rounded-full bg-blue-500"
-          />
+          <span aria-hidden="true" className="text-ring">
+            New
+          </span>
         </>
       ) : null}
     </Link>
@@ -34,12 +33,12 @@ export function ComponentsIndex() {
   const newest = components.filter((component) => component.isNew)
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-2">
-        <h1 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+        <h1 className="scroll-m-20 text-[18px] leading-6 font-[450]">
           Components
         </h1>
-        <p className="text-base text-muted-foreground">
+        <p className="max-w-2xl text-[15px] leading-6 font-[450] text-muted-foreground">
           Here you can find all the components available in the library. We are
           working on adding more components.
         </p>
@@ -47,10 +46,10 @@ export function ComponentsIndex() {
 
       {newest.length > 0 ? (
         <section className="flex flex-col gap-4">
-          <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+          <h2 className="scroll-m-20 text-[17px] leading-6 font-[450]">
             New Components
           </h2>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-x-8 lg:gap-x-16 lg:gap-y-6">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:grid-cols-3">
             {newest.map((component) => (
               <ComponentLink
                 key={component.slug}
@@ -63,10 +62,10 @@ export function ComponentsIndex() {
       ) : null}
 
       <section className="flex flex-col gap-4">
-        <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h2 className="scroll-m-20 text-[17px] leading-6 font-[450]">
           All Components
         </h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-x-8 lg:gap-x-16 lg:gap-y-6">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:grid-cols-3">
           {components.map((component) => (
             <ComponentLink
               key={component.slug}

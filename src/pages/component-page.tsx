@@ -30,7 +30,7 @@ class ExampleBoundary extends Component<BoundaryProps, BoundaryState> {
   render() {
     if (this.state.error) {
       return (
-        <p className="text-sm text-destructive">
+        <p className="text-[15px] leading-6 font-[450] text-destructive">
           This example failed to render.
         </p>
       )
@@ -47,13 +47,13 @@ export function ComponentPage() {
 
   if (!component || !Example) {
     return (
-      <div className="flex flex-col gap-3">
-        <h1 className="text-3xl font-semibold tracking-tight">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[18px] leading-6 font-[450]">
           Component not found
         </h1>
         <Link
           to="/components"
-          className="text-sm font-medium underline-offset-4 hover:underline"
+          className="text-[15px] leading-6 font-[450] underline-offset-4 hover:underline"
         >
           All components
         </Link>
@@ -63,19 +63,19 @@ export function ComponentPage() {
 
   return (
     <article className="flex flex-col">
-      <h1 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+      <h1 className="scroll-m-20 text-[18px] leading-6 font-[450]">
         {component.title}
       </h1>
-      <p className="mt-2 text-base text-muted-foreground">
+      <p className="mt-2 max-w-2xl text-[15px] leading-6 font-[450] text-muted-foreground">
         {component.description}
       </p>
       <div
         data-slot="component-preview"
         className={cn(
-          "mt-6 flex min-h-80 w-full rounded-2xl border bg-background p-6 md:p-10",
+          "mt-8 flex min-h-80 w-full rounded-[24px] border bg-background p-6",
           component.align === "start"
             ? "items-start justify-start"
-            : "items-center justify-center",
+            : "items-center justify-center"
         )}
       >
         {component.iframe ? (
@@ -89,7 +89,7 @@ export function ComponentPage() {
             <div
               className={cn(
                 "min-w-0",
-                component.align === "start" ? "w-full" : "flex justify-center",
+                component.align === "start" ? "w-full" : "flex justify-center"
               )}
             >
               <Example />
