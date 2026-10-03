@@ -2,7 +2,7 @@
 
 This is the start of the guide. The rest of the system is not written yet.
 
-Follow only what is written here. Do not invent colors, tokens, or components. A color scheme and its patterns are chosen when an interface is built, using the brand method below. They are not stored in this guide.
+Follow only what is written here. Do not invent colors, tokens, or components. The light and dark themes below are the only colors. Patterns are generated from the theme in use. They are not stored in this guide.
 
 ## Principles
 
@@ -76,12 +76,86 @@ No all-capital monospace tags or headers. A section does not get a tiny uppercas
 
 ## Brand
 
-Brand styles are built from novel assets and a color scheme. The interface stays plain. What makes it this brand is the scheme, plus assets made for this screen. Personality stays in the details above. A second typeface, a stock photo, or a decorative frame is not a brand style.
+Brand styles are built from novel assets and a color scheme. The interface stays plain. What makes it this brand is one of the themes below, plus assets made for this screen. Personality stays in the details above. A second typeface, a stock photo, or a decorative frame is not a brand style.
 
-When a screen needs a brand style, do this:
+Use the light theme or the dark theme. Do not mix them in one interface. Do not add a color, and do not change a value. An 8-digit hex is the same color with alpha, already flattened. It is not a new hue.
 
-1. Find a published palette on a color-scheme website. Color Hunt, Happy Hues, and Coolors are the kind of site to use. Copy the colors as they are published, and keep the link to that palette. Do not invent hex values. Do not merge two palettes into a new one. Do not nudge a value because it feels slightly off.
-2. The scheme has to work as flat color on a simple interface: a background, text that can be read on it, and enough colors for the controls and the patterns. If the text cannot be read, pick a different published scheme. Do not repair a scheme by adding a color that was not on the page.
-3. Generate patterns from that scheme and put them in the image sections. The patterns are the novel assets, and they are media, so they are part of the content. Draw them for this interface. Build the repeat on the 8px grid. Use flat fills and hard edges only. A pattern may tile. It stays quiet enough that text beside it still reads. A downloaded texture, a photo, or a gradient field is not a pattern from this guide. A pattern used as a border, a background wash, or a frame around ordinary text is chrome. It belongs in the image section.
+Generate patterns from the theme you are using and put them in the image sections. The patterns are the novel assets, and they are media, so they are part of the content. Draw them for this interface. Build the repeat on the 8px grid. Use flat fills and hard edges only, taken from that theme. A pattern may tile. It stays quiet enough that text beside it still reads. A downloaded texture, a photo, or a gradient field is not a pattern from this guide. A pattern used as a border, a background wash, or a frame around ordinary text is chrome. It belongs in the image section.
 
-Choose the scheme and the patterns at build time. This guide does not contain them.
+### Light theme
+
+Surfaces and lines:
+
+- `#ffffff` page background
+- `#f1f1f1` secondary surface
+- `#f4f4f5` hover surface
+- `#ececec` divider
+- `#d1d5dc` line
+- `#cfcfcf` mid gray
+- `#0000001a` black at 10%
+- `#00000026` black at 15%
+- `#0000002e` black at 18%
+- `#09090b1a` hairline
+
+Text:
+
+- `#000000` text
+- `#0000007a` text at 48%
+- `#0000008c` text at 55%
+- `#00000099` text at 60%
+- `#000000cc` text at 80%
+- `#313131` body
+- `#8b8b8b` muted
+- `#8d918e` muted
+- `#c2c5c3` muted hover
+- `#71717b` secondary
+- `#6a7282` secondary
+- `#4a5565` secondary
+- `#364153` secondary
+- `#27272a` strong
+- `#1e2939` strong
+
+Accents:
+
+- `#155dfc` blue
+- `#00a544` green
+- `#fe6e00` orange
+- `#5f7d3b` green
+
+### Dark theme
+
+Surfaces:
+
+- `#000000` background
+- `#141414` raised surface
+- `#262626` higher surface
+- `#ffffff12` input and quiet surface
+- `#ffffff1a` secondary control
+- `#ffffff33` secondary control hover, and the stronger line
+- `#ffffff4d` pressed secondary control
+- `#ffffff` primary control
+- `#ffffffcc` primary control hover
+- `#ffffffb3` primary control pressed
+- `#b2b2b2` tooltip surface, with `#000000` tooltip text
+
+Text and lines:
+
+- `#ffffff` text
+- `#ffffff99` secondary text
+- `#ffffff4d` tertiary text
+- `#000000` inverted text
+- `#ffffff1a` line
+- `#ffffff33` line hover
+- `#ffffff4d` line active
+
+Accents and status:
+
+- `#1d9bf0` blue
+- `#00ba7c` success, on `#002218`
+- `#ffd400` warning, on `#3d1e02`
+- `#f4212e` danger, on `#3d0105`
+- `#f64b5c` danger hover
+- `#f87580` danger pressed
+- `#67070f` danger line
+- `#02113d` info surface
+- `#c936cc` on `#2d032d`
