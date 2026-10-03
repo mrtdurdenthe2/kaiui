@@ -2,4 +2,6 @@
 
 This repository is Kai Wilson's UI style reference. Read it before building UI.
 
-Follow only the style written in this repository, starting with [docs/style-guide.md](docs/style-guide.md). Do not invent the rest of the system.
+The component reference is the gallery in this repo. It follows the shadcn/ui component section: neutral nova components, each shown as a working example. Inter is the only typeface.
+
+The written rules that still apply are in [docs/style-guide.md](docs/style-guide.md). Where a rule fights a shadcn component (type size floor, three sizes, three weights, 24px radius), the component keeps the shadcn metrics.
